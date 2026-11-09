@@ -60,7 +60,7 @@
 
 | 方式 | 認証 |
 |---|---|
-| Blossom | kind 24242（`["t", "upload"]`、5 分後の `expiration`、`["x", <SHA-256>]`、`["server", <ホスト>]`、`content` は `Upload image`）を `Authorization: Nostr <base64url>` で送る |
+| Blossom | kind 24242（`["t", "upload"]`、5 分後の `expiration`、`["x", <SHA-256>]`、`["server", <ホスト>]`、`content` は `Upload image`）を `Authorization: Nostr <base64>`（標準の base64、パディングあり。URL 用の base64 を受け付けないサーバーがあるため）で送る |
 | NIP-96 | NIP-98 の kind 27235（`["u", <API の URL>]`、`["method", "POST"]`、`["payload", <SHA-256>]`）を `Authorization: Nostr <base64>` で送る |
 
 - 認証イベントはリレーには送りません。ただし、アップロード先のサーバーには自分の公開鍵と署名が渡ります。
